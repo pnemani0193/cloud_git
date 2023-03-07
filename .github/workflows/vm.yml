@@ -29,6 +29,5 @@ jobs:
         env: 
           project_name: ${{ secrets.GCLOUD_PROJECT_NAME }}
           token_file: ${{ secrets.GCLOUD_ACCESS_TOKEN }}
-          config: ${{ secrets.GCLOUD_VM_CONFIG }}
         run: |
-          pn_assignment10/run.sh project_name token_file config
+          pn_assignment10/run.sh project_name token_file
