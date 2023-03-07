@@ -30,4 +30,5 @@ jobs:
           project_name: ${{ secrets.GCLOUD_PROJECT_NAME }}
           token_file: ${{ secrets.GCLOUD_ACCESS_TOKEN }}
         run: |
+          chmod +x pn_assignment10/run.sh
           pn_assignment10/run.sh project_name token_file
