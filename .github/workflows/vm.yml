@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Create VMs
 
 # Controls when the workflow will run
 on:
@@ -25,10 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Gcloud instance create
+      - name: Gcloud vm instance create
         env: 
           project_name: ${{ secrets.GCLOUD_PROJECT_NAME }}
           token_file: ${{ secrets.GCLOUD_TOKEN }}
         run: |
           chmod +x pn_assignment10/run.sh
+          gcloud config set account pardhasaradhisastry.nemani@valpo.edu
           pn_assignment10/run.sh project_name token_file
